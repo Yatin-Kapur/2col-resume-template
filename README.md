@@ -7,11 +7,13 @@ There is overflow of text on the right hand column if you keep typing, so you wi
 
 The indentation upon opening of the file itself (at least in vim) is really bad. A quick solution is to open the template and type:
 
-```:%s/^\s\+//
+```
+:%s/^\s\+//
 ```
 This will get rid of all the white space, then type:
 
-```gg=G
+```
+gg=G
 ```
 
 Which will take you to the top of the file, and add indentation where is needed.
