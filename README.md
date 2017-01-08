@@ -5,7 +5,7 @@ Template created in LaTeX for a two column resume. Has a 65-30 (5 for margins) s
 Issues:
 There is overflow of text on the right hand column if you keep typing, so you will have to manually enter \\ in order for the text to wrap into the next line, there may be need of trial and error.
 
-The indentation upon opening of the file itself (at least in vim) is really bad. A quick solution is to open the template and type:
+The indentation upon opening of the file itself for some reason (at least in vim) is really bad. A quick solution is to open the template and type:
 
 ```
 :%s/^\s\+//
