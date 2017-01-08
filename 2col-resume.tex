@@ -1,0 +1,116 @@
+<+	+>	!comp!	!exe!
+
+\documentclass[11pt]{article} 
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[]{hyperref}
+\usepackage{parskip}
+\usepackage[none]{hyphenat}
+\usepackage[document]{ragged2e}
+\usepackage[default]{lato}
+
+\pagenumbering{gobble} % to turn off page numbering
+
+% font change to renew command and not insert before each heading
+\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\mddefault}{l}
+
+% switch default weight to lightoitle for each new section 
+\newcommand{\titl}[1]
+{{\Large#1} \\}
+
+% header element for each single element in the section
+\newcommand{\headerel}[4]
+{\begin{tabular*}{\linewidth}{l}
+  \rule{0pt}{17pt}
+  {\large\textbf{#1}} \\
+  { #2 | #3 | #4}
+\end{tabular*}}
+
+% descriptions of each single item for upto three items
+\newcommand{\info}[3]
+{\vspace{0.5em}
+  \begin{itemize}
+  \parskip=0.1em
+\item #1
+\item #2
+\item #3
+\end{itemize}} 
+
+% small side columns
+\newcommand{\smallcol}[3]
+{\begin{tabular*}{\linewidth}{l}
+  \rule{0pt}{17pt}
+{\large\textbf{#1}} \\
+{ #2} \\
+{ #3} 
+\end{tabular*}}
+
+\begin{document}
+
+\begin{center}
+
+{\Huge <++>} \\ % name
+\vspace{0.2em}
+\href{<++>}{<++>} \ \ \textbullet 
+\ \ \href{<++>}{<++>} \\ % links under header - first line
+\textbf{GitHub:} \href{<++>}{<++>} \ \textbullet \ \ 
+\textbf{LinkedIn:} \href{<++>}{<++>} \\ % links under header - second line
+
+\end{center}
+
+\vspace{0.4em}
+\hrule % horizontal line with spacing 
+\begin{minipage}[t]{.65\textwidth} % new minipage - left side
+  \vspace{2em}
+  \titl{\textsc{EXPERIENCE}} % first section title
+  \headerel{\textsc{<++>}}{<++>}{<++>}{<++>} \\  % details in the order of {company}{position}{location}{date}
+  \info{point 1}{point 2}{point 3} % points and description
+
+  \vspace{2em}
+  \titl{\textsc{PROJECTS}} % second section title
+  \headerel{\textsc{<++>}}{<++>}{<++>}{<++>} \\  % details in the order of {company}{position}{location}{date}
+  \info{point 1}{point 2}{point 3} % points and description
+    
+  \vspace{2em}
+  \titl{\textsc{EXTRACURRICULAR \ INVOLVEMENT}} % third section title
+  \headerel{\textsc{<++>}}{<++>}{<++>}{<++>} \\  % details in the order of {company}{position}{location}{date} 
+  \info{point 1}{point 2}{point 3} % points between entries
+\end{minipage} \hspace{0.4em} % add spacing between minipages
+\begin{minipage}[t]{.3\textwidth} % new minipage - right side
+  \vspace{2em} 
+  \titl{\textsc{EDUCATION}} % first small column
+  \smallcol{\textsc{<++>}}{<++>}{<++>} % education first item
+  \smallcol{\textsc{<++>}}{<++>}{<++>} % education second item 
+
+  \vspace{1em}
+  \titl{\textsc{SKILLS}} % second small column
+  \begin{tabular*}{\textwidth}{l} % include table for skills; one column table with several different rows for several different categories
+    \rule{0pt}{17pt}
+    <++> % first row
+    \\
+    \vspace{-0.9em}
+    \\
+    <++> % second row
+    \\
+    \vspace{-0.9em}
+    \\
+    <++> % third row
+  \end{tabular*}
+
+  \vspace{1em}
+  \titl{\textsc{AWARDS}} % third small column
+  \begin{itemize}
+    \item <++>
+    \item <++>
+  \end{itemize}
+
+\end{minipage}
+
+\end{document}
+
+
+
